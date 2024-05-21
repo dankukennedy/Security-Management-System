@@ -8,6 +8,7 @@ define('BD_DATABASE','defint');
 define('SITE_URL','http://127.0.0.1/defint/');
 
 include_once('DatabaseConnection.php');
+
 $db=new DatabaseConnection;
 //include('../codes/authentication_code.php');
 
