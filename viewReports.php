@@ -6,13 +6,20 @@ include('include/header.php')
 <?php 
 include('include/sidebar.php')
 ?>
+ <style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
 
   <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">                  
-                <div class="col-md-12">
-                <h2> View Reports</h2> 
-                <h5>Defence Intelligence DSR </h5>
+                <div class="col-md-12"> 
+                   <div>
+                        <h2 style="margin:20px; font-family: sans-serif; text-align:center; text-transform: uppercase;">View Reports</h2>
+                   </div>
+                <h3><strong>Defence Intelligence DSR  List</strong></h3>
      <h5 > <i style="color:green; font:200"><?php  include('include/message.php'); ?></i></h5>
     <div class="card">
      <div class="card-header">
@@ -27,8 +34,9 @@ include('include/sidebar.php')
                        <th>Title</th>
                        <th>Post</th>
                        <th>Occurance</th>
-                       <th>description</th>
-                       <th>comment</th>
+                       <th>Description</th>
+                       <th>Comments</th>
+                       <th>Date</th>
                        <th>Edit</th>
                        <th>Deleted</th>
                     </tr>
@@ -47,8 +55,9 @@ include('include/sidebar.php')
                         <td><?= $row['title'] ?></td>
                         <td><?= $row['post'] ?></td>
                         <td><?= $row['occurance'] ?></td>  
-                        <td><?= $row['description'] ?></td>                            
+                        <td><?= $row['description'] ?></td>                          
                         <td><?= $row['comment'] ?></td>
+                        <td><?= $row['created_at'] ?></td>
                         
                         <td>
                              <a href="editReport.php?id=<?= $row['id'] ?>" class="btn btn-success">Edit</a></td>

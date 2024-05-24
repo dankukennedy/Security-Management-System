@@ -7,15 +7,21 @@ include('include/sidebar.php')
 ?>
 
 
-
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
-                    <div class="col-md-12">
-                     <h2>My Profile</h2>   
+                    <div class="col-md-12"> 
+                     <div>
+                          <h2 style="margin:20px; font-family: sans-serif; text-align:center; text-transform: uppercase;">My Profile</h2>
+                       </div>                       
                      <?php  include('include/message.php'); ?>
-                        <h5>Defence Intellengence . </h5>
+                     <h3><strong>Defence Intellengence DSR </strong></h3>
                     </div>
                 </div>              
                  <!-- /. ROW  -->

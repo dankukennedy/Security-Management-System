@@ -9,7 +9,8 @@ if(isset($_POST['send_report']))
          'post'=>validateInput($db->conn,$_POST['post']),
          'occurance'=>validateInput($db->conn,$_POST['occurance']),
          'description'=>validateInput($db->conn,$_POST['description']),
-         'comment'=>validateInput($db->conn,$_POST['comment'])
+         'comment'=>validateInput($db->conn,$_POST['comment']),
+         'email'=>validateInput($db->conn,$_POST['email']),
         
         
     ];

@@ -29,10 +29,6 @@ public function confirmPassword($password,$repassword)
   }
 }
 
-
-
-
-
 //checking password not less than 6
 public function passwordLenght($password)
 {
@@ -139,7 +135,7 @@ public function isRegimentalNoEmpty($regimentalNo)
     }
 }
 
-
+//Checking whether Email exist
 public function isEmailValid($email)
 {
     if(filter_var($email,FILTER_VALIDATE_EMAIL))
@@ -198,8 +194,7 @@ public function checkEmail($email)
         return false;
     } else{
         return true;
-    }
-    
+    }    
 
 }
 
@@ -215,9 +210,10 @@ public function checkNia($nia)
   }
 }
 
-
+//Checking if NIA Exist
 public function isNiaExist($nia)
-{ $checkManager="SELECT nia FROM admin WHERE nia ='$nia' LIMIT 1";
+{ 
+  $checkManager="SELECT nia FROM admin WHERE nia ='$nia' LIMIT 1";
  $result=$this->conn->query($checkManager);
  if ($result->num_rows > 0 ) {
    return true;
@@ -226,7 +222,6 @@ public function isNiaExist($nia)
  }
  
 }
-
 
 // Checcking whether Region is not Empty.
 public function IsRegionEmpty($region){
@@ -249,7 +244,6 @@ public function IsRegionEmpty($region){
       return false;
     }
   }
-
   
 // Checcking whether Region is not Empty.
 public function IsGenderEmpty($gender){
@@ -261,7 +255,6 @@ public function IsGenderEmpty($gender){
       return false;
     }
   }
-
   
 // Checcking whether Region is not Empty.
 public function IsRankEmpty($rank){
@@ -274,13 +267,7 @@ public function IsRankEmpty($rank){
     }
   }
   
-  
-  
 
 }
-
-
-
-
 
 ?>

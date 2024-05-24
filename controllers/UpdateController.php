@@ -21,15 +21,17 @@
 
    }
 
-   public function update($rank,$region,$subDivision,$number,$id)
+   public function update($rank,$region,$subDivision,$number,$email,$about,$id)
    {
    $user_id=validateInput($this->conn,$id);
   $rank= validateInput($this->conn,$_POST['rank']);
   $region= validateInput($this->conn,$_POST['region']);
   $subDivision= validateInput($this->conn,$_POST['subDivision']);
   $number= validateInput($this->conn,$_POST['number']); 
+  $email= validateInput($this->conn,$_POST['email']); 
+  $about= validateInput($this->conn,$_POST['about']); 
 
-    $userUpdateQuery=" UPDATE users SET rank='$rank',region='$region',subDivision='$subDivision',number='$number'  WHERE id='$user_id' LIMIT 1";
+    $userUpdateQuery=" UPDATE users SET rank='$rank',region='$region',subDivision='$subDivision',number='$number',about='$about',email='$email'  WHERE id='$user_id' LIMIT 1";
    $result=$this->conn->query($userUpdateQuery);
    if($result)
    { 

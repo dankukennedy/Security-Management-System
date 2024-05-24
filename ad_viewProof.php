@@ -7,13 +7,23 @@ include('include/header.php')
 include('include/sidebar.php')
 ?>
 
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
+
     <div id="page-wrapper" >
     <div id="page-inner">
     <div class="row">
     <div class="col-md-12">
         <h2> View Evidence</h2>
-        <h5>Defence Intelligence DSR </h5>
+        <div>
+               <h2 style="margin:20px; font-family: sans-serif; text-align:center; text-transform: uppercase;">View Evidence</h2>
+                </div>            
         <h5 > <i style="color:green; font:200"><?php  include('include/message.php'); ?></i></h5>
+        <h3><strong>Defence Intellengence DSR</strong> </h3>
+
         <div class="card">
             <div class="card-header">
                 <h5 style="color:white ;">View Reports</h5>

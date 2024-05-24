@@ -7,12 +7,17 @@ include('include/header.php')
 include('include/sidebar.php')
 ?>
 
-
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
+ 
     <div id="page-wrapper" >
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <h2> Write Proof</h2>
+                <h2> Write Proof</h2>
                     <h5>Defence Intellengence </h5>
                     <h3 style="color: green;">Evidence & Proof  </h3>
                     <hr />

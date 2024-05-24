@@ -4,10 +4,12 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="css/account.css" rel="stylesheet" >
-<!------ Include the above in your HEAD tag ----------><style>
-  
-    
-</style>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
 
 <script type="text/javascript">
     var region ={
@@ -57,7 +59,7 @@
 
 <body>
     <div id="login">
-        <h3 class="text-center text-white pt-5">DEFINT</h3>
+        <h3 class="text-center text-white pt-2">DEFINT</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
@@ -167,10 +169,9 @@
                             <div class="form-group">
                                 <button type="register" name="register" class="btn btn-info btn-md" >Create Account</button>
                               <i ><a href="<?php base_url('login.php') ?>" class="text-right"><i style="color:orange;">All ready have Account Login here</i></a></i>
-                            </div>
-                            
-
-                        </form>
+                            </div>  
+                            <br><br>                         
+                      </form>
                     </div>
                 </div>
             </div>

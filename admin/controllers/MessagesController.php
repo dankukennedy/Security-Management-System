@@ -43,7 +43,7 @@ class MessagesController
 
     public function index()
     {
-        $msgQry="SELECT * FROM messages ";
+        $msgQry="SELECT * FROM messages order by id desc";
         $result=$this->conn->query($msgQry);
         if($result->num_rows > 0)
         {

@@ -7,14 +7,20 @@ include('include/header.php')
 include('include/sidebar.php')
 ?>
 
-
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
 
   <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2> View Evidence</h2>
-                        <h5>Defence Intelligence  </h5>
+                        <div>
+                          <h2 style="margin:20px; font-family: sans-serif; text-align:center; text-transform: uppercase;">View Evidence</h2>
+                       </div>
+                       <h3><strong>Defence Intellengence DSR</strong> </h3>
                     </div>
                 </div>
                  <!-- /. ROW  -->
@@ -36,7 +42,7 @@ include('include/sidebar.php')
                             <div class="container">
 
                                 <!-- Trigger the modal with a button -->
-                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click Here To View Proof</button>
                                 <!-- Modal -->
                                 <div id="myModal" class="modal fade" role="dialog">
                                     <div class="modal-dialog modal-lg">
@@ -45,14 +51,14 @@ include('include/sidebar.php')
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="modal-title">Modal Header</h4>
+                                                <h4 class="modal-title">View Proof</h4>
                                             </div>
                                             <div class="modal-body">
                                                 <?//=$row['id'];  ?><br>
-                                                Title:<?= $row['title'] ?><br>
-                                                Post: <?= $row['post'] ?><br>
-                                                Description: <?= $row['description'] ?><br>
-                                                Comment:  <?= $row['comment'] ?><br>
+                                                <strong>Title: </strong><?= $row['title'] ?><br><br>
+                                                <strong>Post: </strong> <?= $row['post'] ?><br><br>
+                                                <strong>Description:</strong> <?= $row['description'] ?><br><br>
+                                                <strong>Comment:</strong>  <?= $row['comment'] ?><br><br>
                                                 <embed src="files/<?= $row['file_url'] ?>"
                                                        frameborder="0" width="100%" height="400px">
 

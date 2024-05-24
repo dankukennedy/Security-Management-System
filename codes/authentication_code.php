@@ -11,9 +11,12 @@ if(isset($_POST['updateProfile']))
     $number=validateInput($db->conn, $_POST['number']);
     $rank=validateInput($db->conn, $_POST['rank']);
     $region=validateInput($db->conn, $_POST['region']);
+    $profile=validateInput($db->conn, $_POST['profile']);
+    $email=validateInput($db->conn, $_POST['email']);
+    $about=validateInput($db->conn, $_POST['about']);
     $subDivision=validateInput($db->conn, $_POST['subDivision']);
     $userUpdateDetails= new UpdateController;
-     $result=$userUpdateDetails->update($rank,$region,$subDivision,$number,$id);
+     $result=$userUpdateDetails->update($rank,$region,$subDivision,$number,$email,$about,$id);
      if($result)
      {   
       redirect(" <h5 style='color: green';> Profile Update  Successfully </h5>","settings.php");

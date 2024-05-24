@@ -43,7 +43,7 @@ class TaskController
 
     public function index()
     {
-        $taskQry="SELECT * FROM tasks ";
+        $taskQry="SELECT * FROM tasks order by id desc";
         $result=$this->conn->query($taskQry);
         if($result->num_rows > 0)
         {

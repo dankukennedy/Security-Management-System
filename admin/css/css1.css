@@ -3,6 +3,7 @@ body {
   padding: 0;
 height: 100vh;
  background-image: url(/defint/image/register.jpeg);
+ font-family: sans-serif;
  
 
   }
@@ -13,10 +14,13 @@ height: 100vh;
     border: 1px solid #9C9C9C;
     background-color: #EAEAEA;
     opacity: 0.9;
+    font-family: sans-serif;
   }
   #login .container #login-row #login-column #login-box #login-form {
     padding: 20px;
+    font-family: sans-serif;
   }
   #login .container #login-row #login-column #login-box #login-form #register-link {
     margin-top: -85px;
+    font-family: sans-serif;
   }

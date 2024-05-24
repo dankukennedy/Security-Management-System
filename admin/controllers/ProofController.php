@@ -40,7 +40,7 @@ class ProofController
 
     public function index()
     {
-        $proofQry="SELECT * FROM proof";
+        $proofQry="SELECT * FROM proof order by id desc";
         $result=$this->conn->query($proofQry);
         if($result->num_rows > 0)
         {

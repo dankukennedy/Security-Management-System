@@ -8,15 +8,18 @@ $auth->isLoggedIn();
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="css/css1.css" rel="stylesheet" >
-<!------ Include the above in your HEAD tag ----------><style>
-  
-    
-</style>
+<!------ Include the above in your HEAD tag ---------->
+
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
 
 
 <body>
     <div id="login">
-        <h3 class="text-center text-white pt-5">DEFINT</h3>
+        <h3 class="text-center text-white pt-2">DEFINT</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
@@ -41,8 +44,7 @@ $auth->isLoggedIn();
                             <div id="register-link" class="text-right">
                                 <a href="<?php base_url('register.php') ?>" class="text-info"><i style="color:orange ;"> Register here</i></a>
                             </div>
-                            </div>
-                            
+                            </div>                           
                            
                             
                              <br><br>

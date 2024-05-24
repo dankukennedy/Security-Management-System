@@ -5,9 +5,12 @@ include('include/header.php')
 <?php 
 include('include/sidebar.php')
 ?>
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
 
-   
-</style>
 
 <script type="text/javascript">
     var region ={
@@ -62,7 +65,7 @@ include('include/sidebar.php')
                     <div class="col-md-12">
                      <h2>Update Profile</h2>   
                         <h5>Defence Intellengence DSR </h5>
-                        
+                        <h5 > <i style="color:green; font:200"><?php  include('include/message.php');  ?></i></h5>
                         <hr />  
                         <form class="user" action="" method="POST"> 
                         <input type="hidden" value="<?=$data['id'];  ?>" name="user_id" class="form-control ">
@@ -85,8 +88,8 @@ include('include/sidebar.php')
                                 </div>
 
                                 <div class="form-group">
-                              <select name="rank" class="form-control " id="rank"  required>
-                                            <option value="Select Ranks"   disabled selected>Select Ranks</option>
+                              <select name="rank" class="form-control" id="rank"  required>
+                                            <option value="<?=$data['rank']; ?>"  selected>Select Ranks</option>
                                             <option value="General " >General </option>
                                             <option value="Lieutenant General" >Lieutenant General</option>
                                             <option value="Major General " >Major General </option>
@@ -111,7 +114,7 @@ include('include/sidebar.php')
 
                               <div class="form-group">
                               <select id="category" class="form-control" name="region" size="1" onchange="makeSubmenu(this.value)">
-                                                <option value="" disabled selected>Region</option>
+                                                <option value="<?=$data['region']; ?>" selected>Region</option>
                                                 <option>Ahafo</option>
                                                 <option>Ashanti</option>
                                                 <option>Bono</option>
@@ -134,24 +137,35 @@ include('include/sidebar.php')
 
                               <div class="form-group">
                               <select id="categorySelect" class="form-control" name="subDivision" size="1">
-                                            <option value="" disabled selected>Metro/Municipal/District</option>
+                                            <option value="<?=$data['subDivision'];  ?>" disabled selected>Metro/Municipal/District</option>
                                             <option></option>
                                         </select>
                               </div>
                               <div class="form-group">
                                 
-                                <input type="number" name="number" id="number" class="form-control"placeholder="Enter Your Moblie Number" required>
+                                <input type="number" name="number" value="<?=$data['number']; ?>" id="number" class="form-control"placeholder="Enter Your Moblie Number">
                             </div>
-                            <div class="form-group">
+                             
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control " name="email"
+                                        id="email" value="<?=$data['email'];  ?>" placeholder=" Enter First Name" >
+                                </div>
+                                  <div class="col-sm-6">
+                                      
+                                       <textarea id="wabout" class="form-control" name="about" rows="3" cols="50">About You .....</textarea>
+                                </div>
+                                </div>
+                            </div>
 
-
-                            
-
+                            <div class="form-group">                          
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-warning btn-user "  id="update" name="updateProfile">Update Profile Details</button>
                                 </div>
 
-                </form>       
+
+                                
+                     </form>       
                     </div>
                 
                     

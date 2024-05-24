@@ -7,12 +7,21 @@ include('include/header.php')
 include('include/sidebar.php')
 ?>
 
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
+ 
     <div id="page-wrapper" >
     <div id="page-inner">
     <div class="row">
     <div class="col-md-12">
-        <h2> View Evidence</h2>
-        <h5>Defence Intelligence DSR </h5>
+            <div>
+                <h2 style="margin:20px; font-family: sans-serif; text-align:center; text-transform: uppercase;">View Evidence</h2>
+            </div>
+            <h3><strong>Defence Intelligence DSR</strong></h3>
+    
         <h5 > <i style="color:green; font:200"><?php  include('include/message.php'); ?></i></h5>
         <div class="card">
             <div class="card-header">
@@ -26,8 +35,11 @@ include('include/sidebar.php')
                             <th>#</th>
                             <th>Title</th>
                             <th>Post</th>
-                            <th>description</th>
-                            <th>comment</th>
+                            <th>Description</th>
+                            <th>Comments</th>
+                            <th>File to Prove</th>
+                            <th>Email</th>
+                            <th>Date</th>
                             <th>Edit</th>
                             <th>Deleted</th>
                         </tr>
@@ -50,6 +62,9 @@ include('include/sidebar.php')
                                     <td><?= $row['post'] ?></td>
                                     <td><?= $row['description'] ?></td>
                                     <td><?= $row['comment'] ?></td>
+                                    <td><img src="../files/<?= $row['file_url'] ?> "></td>
+                                    <td><?= $row['email'] ?></td>
+                                    <td><?= $row['created_at'] ?></td>
 
                                     <td>
                                         <a href="ad_editProof.php?id=<?= $row['id'] ?>" class="btn btn-success">Edit</a></td>

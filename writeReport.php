@@ -8,16 +8,23 @@ include('include/sidebar.php')
 
 
 
-
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
+ 
 <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2> New Reports</h2>   
-                        <h5>Defence Intellengence DSR </h5>
-                        <h3 style="color: green;">Daily Situation Report  </h3>
+                        <div>
+                           <h2 style="margin:20px; font-family: sans-serif; text-align:center; text-transform: uppercase;"> New Reports</h2>
+                        </div>
+                        <h3 style="color: green; font-family: sans-serif;">Daily Situational Report  </h3>
                         <hr />  
                         <form class="user" action="codes/report_code.php" method="POST"> 
+                            <input type="hidden" name="email" value="<?= $_SESSION['auth_user']['user_email']?>" >
                             
 
                             <div class="form-group row">

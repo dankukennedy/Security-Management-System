@@ -8,9 +8,11 @@ $auth->isLoggedIn();
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="css/css1.css" rel="stylesheet" >
-<!------ Include the above in your HEAD tag ----------><style>
-  
-    
+<!------ Include the above in your HEAD tag ---------->
+<style>
+  body{
+    font-family: sans-serif;
+  }
 </style>
 
 

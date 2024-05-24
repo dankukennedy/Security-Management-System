@@ -24,6 +24,11 @@
 
 </head>
 
+<style>
+    body{
+        font-family: sans-serif;
+    }
+ </style>
 <body>
 
     <!-- Navigation -->

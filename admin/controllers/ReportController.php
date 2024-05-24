@@ -10,7 +10,7 @@
     
     public function index()
     {
-        $reportQry="SELECT * FROM reports ";
+        $reportQry="SELECT * FROM reports order by id desc";
         $result=$this->conn->query($reportQry);
         if($result->num_rows > 0)
         {
@@ -27,7 +27,7 @@
         $data="'".implode("','",$inputData)."'";
         //echo $data;
 
-        $reportgQry="INSERT INTO reports(title,post,occurance,description,comment) VALUES($data)";
+        $reportgQry="INSERT INTO reports(title,post,occurance,description,comment,email) VALUES($data)";
         $result=$this->conn->query($reportgQry);
        if($result)
        {
